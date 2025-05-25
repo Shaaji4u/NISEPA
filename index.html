@@ -127,8 +127,8 @@
       height: 100%;
       background: linear-gradient(
         var(--gradient-angle),
-        rgba(248, 249, 250, 0.92),
-        rgba(233, 236, 239, 0.87)
+        rgba(248, 249, 250, 0.82),
+        rgba(233, 236, 239, 0.80)
       );
       z-index: 1;
       animation: gradient-rotation 15s linear infinite;
@@ -140,8 +140,7 @@
       max-width: 700px;
       margin: 0 auto;
       text-align: center;
-      padding: 2rem;
-      padding-top: calc(2rem + 20px);  /* Additional padding for navbar */
+      padding: 1rem;
     }
 
     .hero-content h1 { 
@@ -337,6 +336,11 @@
         padding: 6rem 0 4rem;  /* Increased top padding on mobile */
       }
       
+      .hero-logo {
+        width: 70px;
+        margin-bottom: 1rem;
+      }
+      
       .hero-content {
         padding: 0 1rem;
       }
@@ -372,6 +376,10 @@
         padding: 5rem 0 3rem;  /* Adjusted padding for very small devices */
       }
 
+      .hero-logo {
+        width: 60px;
+      }
+
       .hero-content {
         padding-top: 1rem;
       }
@@ -397,6 +405,20 @@
         scroll-behavior: auto !important;
       }
     }
+
+    /* Hero Section */
+    .hero-logo {
+      display: block;
+      width: 80px;
+      height: auto;
+      margin: 0 auto 1.5rem;
+      animation: fadeIn 0.8s ease-out;
+      transition: transform 0.4s var(--transition-smooth);
+    }
+
+    .hero-logo:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -418,7 +440,8 @@
     <div class="shape shape-1"></div>
     <div class="shape shape-2"></div>
     <div class="container hero-content">
-      <span class="hero-tag">NISEPA E-invoice Platform</span>
+      <img src="logo1.png" alt="NISEPA Logo" class="hero-logo">
+      <span class="hero-tag">NISEPA E-invoice Center</span>
       <h1>Welcome to E-invoice</h1>
       <p>Generate and validate your invoices efficiently and securely with NISEPA's modern digital solution.</p>
       <div class="search-container">
