@@ -99,7 +99,7 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 4rem 0;
+      padding: 5rem 0;  /* Increased base padding */
       overflow: hidden;
     }
 
@@ -141,6 +141,7 @@
       margin: 0 auto;
       text-align: center;
       padding: 2rem;
+      padding-top: calc(2rem + 20px);  /* Additional padding for navbar */
     }
 
     .hero-content h1 { 
@@ -332,8 +333,12 @@
 
     /* Modern Responsive Design */
     @media (max-width: 768px) {
+      .hero {
+        padding: 6rem 0 4rem;  /* Increased top padding on mobile */
+      }
+      
       .hero-content {
-        padding: 1rem;
+        padding: 0 1rem;
       }
       
       .search-container {
@@ -364,7 +369,11 @@
 
     @media (max-width: 480px) {
       .hero {
-        padding: 2rem 0;
+        padding: 5rem 0 3rem;  /* Adjusted padding for very small devices */
+      }
+
+      .hero-content {
+        padding-top: 1rem;
       }
 
       .navbar-brand span {
